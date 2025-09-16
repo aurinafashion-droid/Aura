@@ -89,7 +89,7 @@
         "main_menu_linklist": "main-menu",
         "mobile_menu_linklist": "customer-account-main-menu",
         "enable_search": true,
-        "show_social_icons": true,
+        "show_social_icons": false,
         "button_text": "",
         "button_link": "",
         "button_type": "btn--primary",
