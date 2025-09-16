@@ -12,7 +12,6 @@
     "hero": {
       "type": "section-hero",
       "settings": {
-        "image_1": "shopify://shop_images/Diamond_Starburst_Ring_in_9_k_Gold.jpg",
         "link": "",
         "width": "wrapper--full",
         "height": "sixty-fifty-height-hero",
@@ -220,7 +219,6 @@
     "hero-product": {
       "type": "section-hero-product",
       "settings": {
-        "image_1": "shopify://shop_images/Mini_Diamond_Moon_Pendant_9_k_Gold.jpg",
         "link": "",
         "product": "pink-tourmaline-diamond-moonstone-necklace-9k-gold",
         "description": "",
@@ -243,7 +241,6 @@
     },
     "press-logos": {
       "type": "section-press-logos",
-      "disabled": true,
       "settings": {
         "enable_heading_slider": false,
         "logo_opacity": 60,
