@@ -31,6 +31,7 @@
       "block_order": [
         "message_GDtqma"
       ],
+      "disabled": true,
       "settings": {
         "show_border": false,
         "layout": "slider",
@@ -51,6 +52,7 @@
       "blocks": {
         "toolbar_GHjNH6": {
           "type": "toolbar",
+          "disabled": true,
           "settings": {
             "text": "<p>Toolbar</p>",
             "menu": "main-menu",
