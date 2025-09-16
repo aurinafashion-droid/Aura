@@ -12,6 +12,7 @@
     "hero": {
       "type": "section-hero",
       "settings": {
+        "image_1": "shopify://shop_images/Black_Simple_Personal_Logo.svg",
         "link": "",
         "width": "wrapper--full",
         "height": "sixty-fifty-height-hero",
