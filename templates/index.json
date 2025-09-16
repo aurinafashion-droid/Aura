@@ -11,11 +11,12 @@
   "sections": {
     "hero": {
       "type": "section-hero",
+      "disabled": true,
       "settings": {
         "image_1": "shopify://shop_images/Black_Simple_Personal_Logo.svg",
         "link": "",
         "width": "wrapper--full",
-        "height": "sixty-fifty-height-hero",
+        "height": "four-fifty-height-hero",
         "flex_align_desktop": "align--middle-center-desktop",
         "mobile_height": "screen-height-full--mobile",
         "flex_align_mobile": "align--middle-center-mobile",

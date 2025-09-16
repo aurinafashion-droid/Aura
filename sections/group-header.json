@@ -52,7 +52,6 @@
       "blocks": {
         "toolbar_GHjNH6": {
           "type": "toolbar",
-          "disabled": true,
           "settings": {
             "text": "<p>Toolbar</p>",
             "menu": "main-menu",
