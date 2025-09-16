@@ -31,7 +31,6 @@
       "block_order": [
         "message_GDtqma"
       ],
-      "disabled": true,
       "settings": {
         "show_border": false,
         "layout": "slider",
@@ -41,7 +40,7 @@
         "marquee_speed": 100,
         "message_spacing": 5,
         "text_font_size": "body-small",
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-1",
         "border_color": "",
         "padding_top": 7,
         "padding_bottom": 7
