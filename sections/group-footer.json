@@ -31,16 +31,6 @@
             "column_width": 33
           }
         },
-        "footer-1": {
-          "type": "linklist",
-          "settings": {
-            "linklist": "main-menu",
-            "title": "",
-            "heading_font_size": "heading-medium",
-            "column_width": 33,
-            "enable_accordion": false
-          }
-        },
         "footer-2": {
           "type": "text",
           "settings": {
@@ -55,11 +45,9 @@
       },
       "block_order": [
         "footer-0",
-        "footer-1",
         "footer-2"
       ],
       "settings": {
-        "logo": "shopify://shop_images/Zohreh_Logo_font_only_BLACK_FOR_WEB_06d2d3fa-3df0-44b0-a50e-33b0a8b25fb3.png",
         "logo_image_width": 150,
         "color_scheme": "",
         "border_color": "#212121",
