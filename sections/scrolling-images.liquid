@@ -1,0 +1,163 @@
+<!-- sections/scrolling-images.liquid -->
+<section class="scrolling-images-section">
+  <style>
+    .scrolling-images-section {
+      overflow: hidden;
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .scrolling-images-heading,
+    .scrolling-images-footer {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .scrolling-images-slider {
+      position: relative;
+      width: 100%;
+    }
+
+    .scrolling-marquee {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .scroller {
+      display: inline-block;
+      animation: scroll-left 20s linear infinite;
+    }
+
+    .slide {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+
+    .slide img {
+      display: block;
+      height: auto;
+      max-height: 400px;
+      width: auto;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @media (max-width: 768px) {
+      .scrolling-images-heading,
+      .scrolling-images-footer {
+        font-size: 1.2rem;
+      }
+
+      .slide img {
+        max-height: 300px;
+      }
+    }
+  </style>
+
+  <div class="scrolling-images-heading">
+    <p>{{ section.settings.heading_text }}</p>
+  </div>
+
+  <div class="scrolling-images-slider">
+    <div class="scrolling-marquee">
+      <div class="scroller">
+        {% for block in section.blocks %}
+          {% if block.settings.image %}
+            <div class="slide" {{ block.shopify_attributes }}>
+              <img
+                src="{{ block.settings.image | img_url: '600x800' }}"
+                srcset="{{ block.settings.image | img_url: '270x360' }} 270w, {{ block.settings.image | img_url: '540x720' }} 540w"
+                sizes="(min-width: 1024px) 300px, 100vw"
+                alt="{{ block.settings.alt_text | default: section.settings.heading_text }}"
+                loading="lazy"
+                width="600"
+                height="800"
+              >
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        {# duplicate for seamless scroll #}
+        {% for block in section.blocks %}
+          {% if block.settings.image %}
+            <div class="slide" {{ block.shopify_attributes }}>
+              <img
+                src="{{ block.settings.image | img_url: '600x800' }}"
+                srcset="{{ block.settings.image | img_url: '270x360' }} 270w, {{ block.settings.image | img_url: '540x720' }} 540w"
+                sizes="(min-width: 1024px) 300px, 100vw"
+                alt="{{ block.settings.alt_text | default: section.settings.heading_text }}"
+                loading="lazy"
+                width="600"
+                height="800"
+              >
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="scrolling-images-footer">
+    <p>{{ section.settings.footer_text }}</p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Scrolling Images",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "VÍSTETE BIEN, SIÉNTETE BIEN"
+    },
+    {
+      "type": "text",
+      "id": "footer_text",
+      "label": "Footer / Subheading Text",
+      "default": "+10.000 CLIENTES POR TODA ESPAÑA"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Slide Image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt text for image",
+          "default": "Demo text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scrolling Images",
+      "category": "Gallery",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
