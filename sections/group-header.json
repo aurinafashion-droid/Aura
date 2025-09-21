@@ -14,19 +14,6 @@
     "announcement": {
       "type": "announcement",
       "blocks": {
-        "message_GDtqma": {
-          "type": "message",
-          "settings": {
-            "show_wheel": false,
-            "message": "Te faltan ||amount|| para obtener el envío gratuito.",
-            "target_url_enabled": false,
-            "target_url": "",
-            "target_referrer_enabled": false,
-            "target_referrer": "",
-            "target_device_enabled": false,
-            "target_device": "mobile"
-          }
-        },
         "text_t3GaKC": {
           "type": "text",
           "settings": {
@@ -38,11 +25,23 @@
             "target_device_enabled": false,
             "target_device": "mobile"
           }
+        },
+        "text_PrYbPE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>¡OFERTAS POR TIEMPO LIMITADO!</p>",
+            "target_url_enabled": false,
+            "target_url": "",
+            "target_referrer_enabled": false,
+            "target_referrer": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
         }
       },
       "block_order": [
-        "message_GDtqma",
-        "text_t3GaKC"
+        "text_t3GaKC",
+        "text_PrYbPE"
       ],
       "custom_css": [
         "span {font-family: \"Playfair Display\"; text-transform: uppercase;}"
