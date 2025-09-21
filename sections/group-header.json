@@ -18,7 +18,19 @@
           "type": "message",
           "settings": {
             "show_wheel": false,
-            "message": "You are ||amount|| away from free shipping.",
+            "message": "Te faltan ||amount|| para obtener el envío gratuito.",
+            "target_url_enabled": false,
+            "target_url": "",
+            "target_referrer_enabled": false,
+            "target_referrer": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "text_t3GaKC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>ENVÍOS GRATIS PARA TODA ESPAÑA</p>",
             "target_url_enabled": false,
             "target_url": "",
             "target_referrer_enabled": false,
@@ -29,7 +41,8 @@
         }
       },
       "block_order": [
-        "message_GDtqma"
+        "message_GDtqma",
+        "text_t3GaKC"
       ],
       "custom_css": [
         "span {font-family: \"Playfair Display\"; text-transform: uppercase;}"
