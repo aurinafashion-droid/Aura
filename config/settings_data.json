@@ -115,8 +115,8 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "section_text": "#000000",
-          "section_bg": "#ffffff",
+          "section_text": "#ffffff",
+          "section_bg": "#000000",
           "section_bg_light": "#ffffff",
           "section_bg_gradient": "",
           "btn_primary_bg": "#ffffff",
