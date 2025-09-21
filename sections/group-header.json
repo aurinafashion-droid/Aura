@@ -32,7 +32,7 @@
         "message_GDtqma"
       ],
       "custom_css": [
-        "span {font-family: \"Playfair Display\";}"
+        "span {font-family: \"Playfair Display\"; text-transform: uppercase;}"
       ],
       "settings": {
         "show_border": false,
