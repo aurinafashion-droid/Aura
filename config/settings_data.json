@@ -16,7 +16,7 @@
     "submenu_link_color": "#000000",
     "menu_transparent_color": "#ffffff",
     "sale_color": "#212121",
-    "type_nav_font": "futura_n4",
+    "type_nav_font": "jost_n4",
     "nav_font_size": 17,
     "nav_letter_spacing": 100,
     "type_nav_caps": true,
@@ -28,7 +28,7 @@
     "type_sub_uppercase": false,
     "subheading_size_desktop": 12,
     "subheading_size_mobile": 14,
-    "type_header_font": "baskerville_no_2_n4",
+    "type_header_font": "libre_baskerville_n4",
     "heading_letter_spacing": -25,
     "type_header_uppercase": false,
     "heading_mini": 16,
@@ -116,7 +116,7 @@
       "scheme-1": {
         "settings": {
           "section_text": "#000000",
-          "section_bg": "#f7dffb",
+          "section_bg": "#ffffff",
           "section_bg_light": "#ffffff",
           "section_bg_gradient": "",
           "btn_primary_bg": "#ffffff",

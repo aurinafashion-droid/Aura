@@ -31,6 +31,9 @@
       "block_order": [
         "message_GDtqma"
       ],
+      "custom_css": [
+        "span {font-family: \"Playfair Display\";}"
+      ],
       "settings": {
         "show_border": false,
         "layout": "slider",
