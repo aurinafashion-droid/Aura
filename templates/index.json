@@ -47,42 +47,6 @@
       ],
       "settings": {}
     },
-    "section_rich_text_8L36mW": {
-      "type": "section-rich-text",
-      "blocks": {
-        "heading_RgMmKg": {
-          "type": "heading",
-          "settings": {
-            "title": "Última oportunidad",
-            "heading_font_size": "heading-small",
-            "padding_bottom": 16,
-            "heading_tag": "automatic"
-          }
-        },
-        "text_bqpKzh": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Las últimas piezas de nuestra colección </p><p>ahora con descuentos de hasta <strong>60%</strong>. Una ocasión única para hacerte con tu prenda exclusiva de Aviero Madrid.</p><p>Comprueba rápidamente si tu talla aún está disponible y haz tu pedido antes de que se agoten.</p><p><strong>Cuanto más compras, más ahorras:</strong><br/>2 o más artículos → <strong>10% DESCUENTO EXTRA</strong><br/>3 o más artículos → <strong>15% DESCUENTO EXTRA</strong><br/>4 o más artículos → <strong>20% DESCUENTO EXTRA</strong></p><p>El descuento se aplica automáticamente en tu carrito.</p>",
-            "text_font_size": "body-small",
-            "padding_bottom": 16
-          }
-        }
-      },
-      "block_order": [
-        "heading_RgMmKg",
-        "text_bqpKzh"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "text-center",
-        "width": "wrapper",
-        "color_scheme": "scheme-4bf997c9-f1f1-4bb7-9764-6c69fe128427",
-        "overlay_opacity": 0,
-        "show_overlay_text": false,
-        "padding_top": 8,
-        "padding_bottom": 0
-      }
-    },
     "hero": {
       "type": "section-hero",
       "disabled": true,
@@ -133,6 +97,42 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "heading_tag": "automatic"
+      }
+    },
+    "section_rich_text_8L36mW": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading_RgMmKg": {
+          "type": "heading",
+          "settings": {
+            "title": "Última oportunidad",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text_bqpKzh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Las últimas piezas de nuestra colección </p><p>ahora con descuentos de hasta <strong>60%</strong>. Una ocasión única para hacerte con tu prenda exclusiva de Aviero Madrid.</p><p>Comprueba rápidamente si tu talla aún está disponible y haz tu pedido antes de que se agoten.</p><p><strong>Cuanto más compras, más ahorras:</strong><br/>2 o más artículos → <strong>10% DESCUENTO EXTRA</strong><br/>3 o más artículos → <strong>15% DESCUENTO EXTRA</strong><br/>4 o más artículos → <strong>20% DESCUENTO EXTRA</strong></p><p>El descuento se aplica automáticamente en tu carrito.</p>",
+            "text_font_size": "body-small",
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "heading_RgMmKg",
+        "text_bqpKzh"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper",
+        "color_scheme": "scheme-4bf997c9-f1f1-4bb7-9764-6c69fe128427",
+        "overlay_opacity": 0,
+        "show_overlay_text": false,
+        "padding_top": 8,
+        "padding_bottom": 0
       }
     },
     "section_collection_gCNKqN": {
@@ -265,9 +265,9 @@
   },
   "order": [
     "17586371673aa94a60",
-    "section_rich_text_8L36mW",
     "hero",
     "section_video_f98pXJ",
+    "section_rich_text_8L36mW",
     "section_collection_gCNKqN",
     "text-row",
     "hero-product",
