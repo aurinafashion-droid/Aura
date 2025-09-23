@@ -32,10 +32,10 @@
             "percentage_size": 20,
             "text_size": 12,
             "background_color": "#fff4ff",
-            "offer_background_color": "#282c2e",
+            "offer_background_color": "#ffffff",
             "percentage_color": "#ff8cb5",
-            "text_color": "#ffffff",
-            "border_color": "#e0e0e0",
+            "text_color": "#333333",
+            "border_color": "#000000",
             "border_width": 1,
             "border_radius": 8
           },
