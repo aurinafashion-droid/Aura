@@ -9,6 +9,44 @@
  */
 {
   "sections": {
+    "17586371673aa94a60": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_ab1fe40_KXVFL9": {
+          "type": "ai_gen_block_ab1fe40",
+          "settings": {
+            "offer_1_percentage": "10% OFF",
+            "offer_1_text": "Buy 2+ items",
+            "offer_2_percentage": "20% OFF",
+            "offer_2_text": "Buy 3+ items",
+            "offer_3_percentage": "30% OFF",
+            "offer_3_text": "Buy 4+ items",
+            "offer_4_percentage": "",
+            "offer_4_text": "",
+            "offer_5_percentage": "",
+            "offer_5_text": "",
+            "gap": 20,
+            "padding": 40,
+            "offer_padding": 20,
+            "min_width": 140,
+            "percentage_size": 32,
+            "text_size": 14,
+            "background_color": "#f8f8f8",
+            "offer_background_color": "#ffffff",
+            "percentage_color": "#d82c0d",
+            "text_color": "#333333",
+            "border_color": "#e0e0e0",
+            "border_width": 1,
+            "border_radius": 8
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_ab1fe40_KXVFL9"
+      ],
+      "settings": {}
+    },
     "hero": {
       "type": "section-hero",
       "disabled": true,
@@ -72,7 +110,7 @@
             "icon_color": "#000000",
             "title": "",
             "heading_font_size": "heading-small",
-            "text": "<p>Solo usamos metales sólidos reciclados, por lo que son 100 % impermeables y resistentes, y se pueden llevar todo el día, todos los días.</p>",
+            "text": "<p>We only use recycled solid metals so they are 100% waterproof and life proof and can be worn all day every day.</p>",
             "text_font_size": "body-small",
             "heading_tag": "automatic"
           }
@@ -85,7 +123,7 @@
             "icon_color": "rgba(0,0,0,0)",
             "title": "",
             "heading_font_size": "heading-small",
-            "text": "<p>Luisa fundó Zohreh V. porque estaba cansada de gastar dinero en joyas que no duraban. Lorem ipsum dolor sit amet.</p>",
+            "text": "<p>Luisa founded Zohreh V. as she was tired of spending money on jewellery that would not last. Lorem ipsum dolor sit amet.</p>",
             "text_font_size": "body-small",
             "heading_tag": "automatic"
           }
@@ -98,7 +136,7 @@
             "icon_color": "rgba(0,0,0,0)",
             "title": "",
             "heading_font_size": "heading-small",
-            "text": "<p>Todas nuestras piezas están diseñadas en el Reino Unido por un equipo con más de 50 años de experiencia combinada en la industria de la joyería. Lorem ipsum dolor.</p><p></p>",
+            "text": "<p>All our pieces are designed in the UK by a team with a combined 50+ years in the jewellery industry. Lorem ipsum dolor.</p>",
             "text_font_size": "body-small",
             "heading_tag": "automatic"
           }
@@ -129,7 +167,7 @@
     "hero-product": {
       "type": "section-hero-product",
       "settings": {
-        "image_1": "shopify://shop_images/autumn-leaves-in-water.jpg",
+        "image_1": "shopify://shop_images/Black_Simple_Personal_Logo.svg",
         "link": "",
         "product": "pink-tourmaline-diamond-moonstone-necklace-9k-gold",
         "description": "",
@@ -139,7 +177,7 @@
         "color_product_text": "#212121",
         "width": "wrapper--full",
         "height": "four-fifty-height-hero",
-        "mobile_height": "screen-height-one-third--mobile",
+        "mobile_height": "four-fifty-height-hero--mobile",
         "flex_align_mobile": "align--bottom-left-mobile",
         "color_scheme": "scheme-1",
         "show_text_background": false,
@@ -163,6 +201,7 @@
     }
   },
   "order": [
+    "17586371673aa94a60",
     "hero",
     "section_video_f98pXJ",
     "text-row",
