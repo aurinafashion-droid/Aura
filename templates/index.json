@@ -129,7 +129,7 @@
     "hero-product": {
       "type": "section-hero-product",
       "settings": {
-        "image_1": "shopify://shop_images/Black_Simple_Personal_Logo.svg",
+        "image_1": "shopify://shop_images/autumn-leaves-in-water.jpg",
         "link": "",
         "product": "pink-tourmaline-diamond-moonstone-necklace-9k-gold",
         "description": "",
@@ -139,7 +139,7 @@
         "color_product_text": "#212121",
         "width": "wrapper--full",
         "height": "four-fifty-height-hero",
-        "mobile_height": "four-fifty-height-hero--mobile",
+        "mobile_height": "screen-height-one-third--mobile",
         "flex_align_mobile": "align--bottom-left-mobile",
         "color_scheme": "scheme-1",
         "show_text_background": false,
