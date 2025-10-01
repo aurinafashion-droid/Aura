@@ -1,6 +1,482 @@
+{% doc %}
+  @prompt
+    Sure! Here's a concise description in your preferred format:
+    
+    ---
+    
+    A transparent top navigation bar over a background image
+    A centered logo flanked by left and right menu items
+    Search and cart icons aligned at far left and right ends
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-transparent-nav-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: {{ block.settings.nav_background_color }};
+    backdrop-filter: blur({{ block.settings.backdrop_blur }}px);
+    -webkit-backdrop-filter: blur({{ block.settings.backdrop_blur }}px);
+    padding: {{ block.settings.nav_padding_vertical }}px 0;
+    transition: all 0.3s ease;
+  }
+
+  .ai-transparent-nav-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .ai-transparent-nav-left-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: {{ block.settings.menu_spacing }}px;
+    flex: 1;
+  }
+
+  .ai-transparent-nav-center-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ai-transparent-nav-right-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: {{ block.settings.menu_spacing }}px;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .ai-transparent-nav-logo-{{ ai_gen_id }} {
+    display: block;
+    line-height: 0;
+  }
+
+  .ai-transparent-nav-logo-{{ ai_gen_id }} img {
+    height: {{ block.settings.logo_height }}px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .ai-transparent-nav-logo-placeholder-{{ ai_gen_id }} {
+    height: {{ block.settings.logo_height }}px;
+    width: 120px;
+    background-color: {{ block.settings.text_color }};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    opacity: 0.1;
+  }
+
+  .ai-transparent-nav-menu-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: {{ block.settings.menu_spacing }}px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ai-transparent-nav-menu-item-{{ ai_gen_id }} {
+    position: relative;
+  }
+
+  .ai-transparent-nav-link-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    text-decoration: none;
+    font-size: {{ block.settings.font_size }}px;
+    font-weight: {{ block.settings.font_weight }};
+    font-family: {{ block.settings.nav_font.family }}, {{ block.settings.nav_font.fallback_families }};
+    font-style: {{ block.settings.nav_font.style }};
+    letter-spacing: {{ block.settings.letter_spacing }}px;
+    transition: color 0.3s ease;
+    {% if block.settings.text_uppercase %}
+      text-transform: uppercase;
+    {% endif %}
+  }
+
+  .ai-transparent-nav-link-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.text_hover_color }};
+  }
+
+  .ai-transparent-nav-icon-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .ai-transparent-nav-icon-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.text_hover_color }};
+  }
+
+  .ai-transparent-nav-search-icon-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-transparent-nav-cart-icon-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-transparent-nav-cart-count-{{ ai_gen_id }} {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: {{ block.settings.cart_count_bg }};
+    color: {{ block.settings.cart_count_text }};
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    min-width: 18px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-transparent-nav-{{ ai_gen_id }} {
+      padding: {{ block.settings.nav_padding_vertical | times: 0.7 }}px 0;
+    }
+
+    .ai-transparent-nav-container-{{ ai_gen_id }} {
+      padding: 0 15px;
+    }
+
+    .ai-transparent-nav-menu-{{ ai_gen_id }} {
+      display: none;
+    }
+
+    .ai-transparent-nav-logo-{{ ai_gen_id }} img {
+      height: {{ block.settings.logo_height | times: 0.8 }}px;
+    }
+
+    .ai-transparent-nav-logo-placeholder-{{ ai_gen_id }} {
+      height: {{ block.settings.logo_height | times: 0.8 }}px;
+      width: 100px;
+    }
+
+    .ai-transparent-nav-icon-{{ ai_gen_id }} {
+      width: {{ block.settings.icon_size | times: 0.9 }}px;
+      height: {{ block.settings.icon_size | times: 0.9 }}px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ai-transparent-nav-left-{{ ai_gen_id }},
+    .ai-transparent-nav-right-{{ ai_gen_id }} {
+      gap: {{ block.settings.menu_spacing | times: 0.7 }}px;
+    }
+  }
+{% endstyle %}
+
+<nav class="ai-transparent-nav-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-transparent-nav-container-{{ ai_gen_id }}">
+    <div class="ai-transparent-nav-left-{{ ai_gen_id }}">
+      {% if block.settings.show_search_left %}
+        <div class="ai-transparent-nav-search-icon-{{ ai_gen_id }}">
+          <svg class="ai-transparent-nav-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </div>
+      {% endif %}
+
+      {% if block.settings.left_menu != blank %}
+        <ul class="ai-transparent-nav-menu-{{ ai_gen_id }}">
+          {% for link in linklists[block.settings.left_menu].links %}
+            <li class="ai-transparent-nav-menu-item-{{ ai_gen_id }}">
+              <a href="{{ link.url }}" class="ai-transparent-nav-link-{{ ai_gen_id }}">
+                {{ link.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    <div class="ai-transparent-nav-center-{{ ai_gen_id }}">
+      {% if block.settings.logo %}
+        <a href="{{ routes.root_url }}" class="ai-transparent-nav-logo-{{ ai_gen_id }}">
+          <img
+            src="{{ block.settings.logo | image_url: width: 400 }}"
+            alt="{{ shop.name }}"
+            width="{{ block.settings.logo.width }}"
+            height="{{ block.settings.logo.height }}"
+            loading="lazy"
+          >
+        </a>
+      {% else %}
+        <a href="{{ routes.root_url }}" class="ai-transparent-nav-logo-{{ ai_gen_id }}">
+          <div class="ai-transparent-nav-logo-placeholder-{{ ai_gen_id }}">
+            <span style="color: {{ block.settings.text_color }}; font-size: 14px; font-weight: 600;">LOGO</span>
+          </div>
+        </a>
+      {% endif %}
+    </div>
+
+    <div class="ai-transparent-nav-right-{{ ai_gen_id }}">
+      {% if block.settings.right_menu != blank %}
+        <ul class="ai-transparent-nav-menu-{{ ai_gen_id }}">
+          {% for link in linklists[block.settings.right_menu].links %}
+            <li class="ai-transparent-nav-menu-item-{{ ai_gen_id }}">
+              <a href="{{ link.url }}" class="ai-transparent-nav-link-{{ ai_gen_id }}">
+                {{ link.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% unless block.settings.show_search_left %}
+        <div class="ai-transparent-nav-search-icon-{{ ai_gen_id }}">
+          <svg class="ai-transparent-nav-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </div>
+      {% endunless %}
+
+      <a href="{{ routes.cart_url }}" class="ai-transparent-nav-cart-icon-{{ ai_gen_id }}">
+        <svg class="ai-transparent-nav-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        {% if cart.item_count > 0 %}
+          <span class="ai-transparent-nav-cart-count-{{ ai_gen_id }}">
+            {{ cart.item_count }}
+          </span>
+        {% endif %}
+      </a>
+    </div>
+  </div>
+</nav>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Transparent navigation",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "range",
+      "id": "logo_height",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Logo height",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Navigation menus"
+    },
+    {
+      "type": "link_list",
+      "id": "left_menu",
+      "label": "Left menu"
+    },
+    {
+      "type": "link_list",
+      "id": "right_menu",
+      "label": "Right menu"
+    },
+    {
+      "type": "header",
+      "content": "Icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search_left",
+      "label": "Show search icon on left",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 16,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "nav_font",
+      "label": "Navigation font",
+      "default": "jost_n4"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "letter_spacing",
+      "min": -2,
+      "max": 4,
+      "step": 0.1,
+      "unit": "px",
+      "label": "Letter spacing",
+      "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "text_uppercase",
+      "label": "Uppercase text",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "nav_background_color",
+      "label": "Background color",
+      "default": "rgba(255, 255, 255, 0.1)"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_hover_color",
+      "label": "Text hover color",
+      "default": "rgba(255, 255, 255, 0.7)"
+    },
+    {
+      "type": "color",
+      "id": "cart_count_bg",
+      "label": "Cart count background",
+      "default": "#ff4444"
+    },
+    {
+      "type": "color",
+      "id": "cart_count_text",
+      "label": "Cart count text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "min": 1000,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "label": "Container width",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "nav_padding_vertical",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "menu_spacing",
+      "min": 15,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Menu item spacing",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "backdrop_blur",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Background blur",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Transparent navigation"
+    }
+  ]
+}
 {% endschema %}
