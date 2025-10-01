@@ -9,44 +9,6 @@
  */
 {
   "sections": {
-    "17586371673aa94a60": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_ab1fe40_KXVFL9": {
-          "type": "ai_gen_block_ab1fe40",
-          "settings": {
-            "offer_1_percentage": "10% OFF",
-            "offer_1_text": "Buy 2+ items",
-            "offer_2_percentage": "20% OFF",
-            "offer_2_text": "Buy 3+ items",
-            "offer_3_percentage": "30% OFF",
-            "offer_3_text": "Buy 4+ items",
-            "offer_4_percentage": "",
-            "offer_4_text": "",
-            "offer_5_percentage": "",
-            "offer_5_text": "",
-            "gap": 10,
-            "padding": 10,
-            "offer_padding": 10,
-            "min_width": 120,
-            "percentage_size": 20,
-            "text_size": 12,
-            "background_color": "#fff4ff",
-            "offer_background_color": "#ffffff",
-            "percentage_color": "#ff8cb5",
-            "text_color": "#333333",
-            "border_color": "#000000",
-            "border_width": 1,
-            "border_radius": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_ab1fe40_KXVFL9"
-      ],
-      "settings": {}
-    },
     "section_announcement_qbkQxi": {
       "type": "section-announcement",
       "blocks": {
@@ -160,6 +122,44 @@
         "padding_bottom": 0,
         "show_placeholder": true
       }
+    },
+    "17586371673aa94a60": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_ab1fe40_KXVFL9": {
+          "type": "ai_gen_block_ab1fe40",
+          "settings": {
+            "offer_1_percentage": "10% OFF",
+            "offer_1_text": "Buy 2+ items",
+            "offer_2_percentage": "20% OFF",
+            "offer_2_text": "Buy 3+ items",
+            "offer_3_percentage": "30% OFF",
+            "offer_3_text": "Buy 4+ items",
+            "offer_4_percentage": "",
+            "offer_4_text": "",
+            "offer_5_percentage": "",
+            "offer_5_text": "",
+            "gap": 10,
+            "padding": 10,
+            "offer_padding": 10,
+            "min_width": 120,
+            "percentage_size": 20,
+            "text_size": 12,
+            "background_color": "#fff4ff",
+            "offer_background_color": "#ffffff",
+            "percentage_color": "#ff8cb5",
+            "text_color": "#333333",
+            "border_color": "#000000",
+            "border_width": 1,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_ab1fe40_KXVFL9"
+      ],
+      "settings": {}
     },
     "hero": {
       "type": "section-hero",
@@ -346,9 +346,9 @@
     }
   },
   "order": [
-    "17586371673aa94a60",
     "section_announcement_qbkQxi",
     "section_hero_scrolling_r9hQ74",
+    "17586371673aa94a60",
     "hero",
     "section_rich_text_8L36mW",
     "section_collection_gCNKqN",
