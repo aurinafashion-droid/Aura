@@ -41,7 +41,7 @@
       "custom_css": [],
       "settings": {
         "header_sticky": false,
-        "header_style": "logo_center_menu_left",
+        "header_style": "logo_above",
         "show_separator_line": false,
         "header_border_color": "#000000",
         "separator_opacity": 80,
