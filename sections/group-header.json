@@ -57,7 +57,7 @@
         "show_social_icons": false,
         "button_text": "GARANTÍA DE DEVOLUCIÓN DE 30 DÍAS",
         "button_link": "",
-        "button_type": "btn--primary",
+        "button_type": "btn--black",
         "show_locale_selector": true,
         "show_country_selector": true,
         "show_country_name": true,
@@ -120,7 +120,7 @@
         "marquee_speed": 100,
         "message_spacing": 5,
         "text_font_size": "body-small",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-f11c2c24-3fd1-4865-bd72-c2a2fd22ceee",
         "border_color": "",
         "padding_top": 7,
         "padding_bottom": 7

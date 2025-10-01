@@ -57,7 +57,7 @@
         "message_spacing": 10,
         "show_border": false,
         "layout": "marquee",
-        "color_scheme": "",
+        "color_scheme": "scheme-f11c2c24-3fd1-4865-bd72-c2a2fd22ceee",
         "padding_top": 5,
         "padding_bottom": 5
       }
@@ -135,10 +135,10 @@
             "percentage_size": 24,
             "text_size": 13,
             "background_color": "#fff4ff",
-            "offer_background_color": "#fdb8cb",
+            "offer_background_color": "#000000",
             "percentage_color": "#fa0059",
-            "text_color": "#000000",
-            "border_color": "#f9b6c9",
+            "text_color": "#ffffff",
+            "border_color": "#000000",
             "border_width": 1,
             "border_radius": 2
           },
@@ -171,6 +171,65 @@
         "show_placeholder": true
       }
     },
+    "section_countdown_timer_8QRnty": {
+      "type": "section-countdown-timer",
+      "blocks": {
+        "subheading_minTfD": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Última oportunidad"
+          }
+        },
+        "heading_eVXYNL": {
+          "type": "heading",
+          "settings": {
+            "title": "Shop Before It Ends",
+            "heading_font_size": "heading-large",
+            "heading_tag": "automatic"
+          }
+        },
+        "buttons_HxgMmR": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Shop now",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_minTfD",
+        "heading_eVXYNL",
+        "buttons_HxgMmR"
+      ],
+      "disabled": true,
+      "name": "Countdown timer",
+      "settings": {
+        "image": "shopify://shop_images/NieuweLogo.svg",
+        "end_date": "2024-12-31",
+        "end_time": "11:59",
+        "period": "am",
+        "end_message": "<p>Offer has expired</p>",
+        "hide_on_complete": true,
+        "digits_font_size": "heading-x-large",
+        "text_font_size": "body-small",
+        "width": "wrapper",
+        "text_align": "text-left",
+        "height": "four-fifty-height-hero",
+        "image_mobile": "shopify://shop_images/autumn-leaves-in-water.jpg",
+        "mobile_height": "four-fifty-height-hero--mobile",
+        "text_align_mobile": "text-left--mobile",
+        "color_scheme": "scheme-f11c2c24-3fd1-4865-bd72-c2a2fd22ceee",
+        "digits_gradient": "",
+        "overlay_opacity": 0,
+        "show_overlay_text": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "section_rich_text_8L36mW": {
       "type": "section-rich-text",
       "blocks": {
@@ -196,6 +255,7 @@
         "heading_RgMmKg",
         "text_bqpKzh"
       ],
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "align_text": "text-center",
@@ -205,33 +265,6 @@
         "show_overlay_text": false,
         "padding_top": 8,
         "padding_bottom": 0
-      }
-    },
-    "section_collection_gCNKqN": {
-      "type": "section-collection",
-      "name": "Featured collection",
-      "settings": {
-        "featured_collection": "",
-        "heading": "Best Sellers",
-        "heading_font_size": "heading-medium",
-        "description": "",
-        "text_font_size": "body-medium",
-        "layout": "inline",
-        "link_text": "Shop Now",
-        "link_url": "",
-        "button_type": "btn--primary",
-        "button_size": "",
-        "button_style": "btn--solid",
-        "show_arrow": false,
-        "layout_desktop": "grid",
-        "grid": 4,
-        "rows": 3,
-        "width": "wrapper",
-        "layout_mobile": "slider",
-        "color_scheme": "",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "heading_tag": "automatic"
       }
     },
     "text-row": {
@@ -308,7 +341,7 @@
         "description": "",
         "text_font_size": "body-medium",
         "enable_quick_add": true,
-        "color_product_bg": "#f5f2ec",
+        "color_product_bg": "#fcd6fc",
         "color_product_text": "#212121",
         "width": "wrapper--full",
         "height": "four-fifty-height-hero",
@@ -322,17 +355,6 @@
         "padding_bottom": 0,
         "show_placeholder": true
       }
-    },
-    "press-logos": {
-      "type": "section-press-logos",
-      "settings": {
-        "enable_heading_slider": false,
-        "logo_opacity": 60,
-        "title": "As seen in",
-        "color_scheme": "",
-        "padding_top": 63,
-        "padding_bottom": 50
-      }
     }
   },
   "order": [
@@ -340,10 +362,9 @@
     "section_hero_scrolling_r9hQ74",
     "17586371673aa94a60",
     "hero",
+    "section_countdown_timer_8QRnty",
     "section_rich_text_8L36mW",
-    "section_collection_gCNKqN",
     "text-row",
-    "hero-product",
-    "press-logos"
+    "hero-product"
   ]
 }

@@ -9,8 +9,8 @@
  */
 {
   "current": {
-    "color_scheme": "scheme-1",
-    "menu_bg_color": "#fdf4ff",
+    "color_scheme": "scheme-f11c2c24-3fd1-4865-bd72-c2a2fd22ceee",
+    "menu_bg_color": "#ffffff",
     "header_link": "#2e2e2e",
     "submenu_bg_color": "#ffffff",
     "submenu_link_color": "#000000",
@@ -325,6 +325,24 @@
           "btn_secondary_border": "#1b2144",
           "accent": "#1b2144",
           "lines_and_border": "#d1cdc4",
+          "overlay": "#000000",
+          "links": "#282c2e"
+        }
+      },
+      "scheme-f11c2c24-3fd1-4865-bd72-c2a2fd22ceee": {
+        "settings": {
+          "section_text": "#ffffff",
+          "section_bg": "#000000",
+          "section_bg_light": "#ffffff",
+          "section_bg_gradient": "",
+          "btn_primary_bg": "#ffffff",
+          "btn_primary_text": "#101010",
+          "btn_primary_border": "#000000",
+          "btn_secondary_bg": "#ffffff",
+          "btn_secondary_text": "#151515",
+          "btn_secondary_border": "#ffffff",
+          "accent": "#1b2144",
+          "lines_and_border": "#000000",
           "overlay": "#000000",
           "links": "#282c2e"
         }
