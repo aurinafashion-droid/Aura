@@ -47,6 +47,120 @@
       ],
       "settings": {}
     },
+    "section_announcement_qbkQxi": {
+      "type": "section-announcement",
+      "blocks": {
+        "text_4EbKYh": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>SOPORTE 24/7</strong></p>",
+            "text_font_size": "body-small",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "text_BdfYGH": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Create a free shipping countdown</strong></p>",
+            "text_font_size": "body-small",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "message_ymX83N": {
+          "type": "message",
+          "settings": {
+            "show_wheel": false,
+            "message": "You are ||amount|| away from free shipping.",
+            "text_font_size": "body-small",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "text_BMccq6": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Create a scrolling marquee or a simple announcement</strong></p>",
+            "text_font_size": "body-small",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        }
+      },
+      "block_order": [
+        "text_4EbKYh",
+        "text_BdfYGH",
+        "message_ymX83N",
+        "text_BMccq6"
+      ],
+      "name": "Scrolling text",
+      "settings": {
+        "slider_speed": 7,
+        "text_alignment": "center",
+        "marquee_speed": 100,
+        "direction": "ticker-rtl",
+        "message_spacing": 10,
+        "show_border": false,
+        "layout": "marquee",
+        "color_scheme": "",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "section_hero_scrolling_r9hQ74": {
+      "type": "section-hero-scrolling",
+      "blocks": {
+        "text_NmbiP4": {
+          "type": "text",
+          "settings": {
+            "description": "Tell your brand's story through images.",
+            "text_font_size": "body-large",
+            "color": ""
+          }
+        },
+        "button_Me89pN": {
+          "type": "button",
+          "settings": {
+            "link_text": "View products",
+            "link": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "text_NmbiP4",
+        "button_Me89pN"
+      ],
+      "name": "Image with scrolling text",
+      "settings": {
+        "image_1": "shopify://shop_images/business-woman-with-wool-hat.jpg",
+        "link": "",
+        "message_spacing": 10,
+        "marquee_speed": 100,
+        "flex_align": "align--middle-center",
+        "type_font": "poppins_n4",
+        "text_font_size_px": 20,
+        "type_letter_spacing": 0,
+        "type_font_caps": false,
+        "scrolling_align": "align--middle-center",
+        "direction": "ticker-rtl",
+        "height": "screen-height-three-quarters",
+        "mobile_height": "screen-height-three-quarters--mobile",
+        "color_scheme": "",
+        "overlay_opacity": 55,
+        "show_overlay_text": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
     "hero": {
       "type": "section-hero",
       "disabled": true,
@@ -65,38 +179,6 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "show_placeholder": true
-      }
-    },
-    "section_video_f98pXJ": {
-      "type": "section-video",
-      "name": "Video",
-      "settings": {
-        "show_video_popup": false,
-        "video_popup_social": "https://www.youtube.com/watch?v=zI_sjJY5aro",
-        "title": "Collection",
-        "heading_font_size": "heading-large",
-        "text": "",
-        "text_font_size": "body-medium",
-        "flex_align": "align--middle-center",
-        "link_text": "View products",
-        "link": "",
-        "button_type": "btn--primary",
-        "button_size": "",
-        "button_style": "btn--solid",
-        "show_arrow": false,
-        "image": "shopify://shop_images/business-woman-with-wool-hat.jpg",
-        "desktop_height": "screen-height-three-quarters",
-        "mobile_image": "shopify://shop_images/business-woman-with-wool-hat.jpg",
-        "mobile_height": "screen-height-one-third--mobile",
-        "width": "wrapper--full",
-        "color_scheme": "",
-        "show_text_background": false,
-        "color": "",
-        "overlay_opacity": 15,
-        "show_overlay_text": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "heading_tag": "automatic"
       }
     },
     "section_rich_text_8L36mW": {
@@ -265,8 +347,9 @@
   },
   "order": [
     "17586371673aa94a60",
+    "section_announcement_qbkQxi",
+    "section_hero_scrolling_r9hQ74",
     "hero",
-    "section_video_f98pXJ",
     "section_rich_text_8L36mW",
     "section_collection_gCNKqN",
     "text-row",
