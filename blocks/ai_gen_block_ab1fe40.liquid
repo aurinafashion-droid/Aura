@@ -4,15 +4,8 @@
   .ai-discount-offers-{{ ai_gen_id }} {
     background-color: {{ block.settings.background_color }};
     padding: {{ block.settings.padding }}px 20px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-  }
-
-  .ai-discount-offers-{{ ai_gen_id }}::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    overflow-x: hidden; /* Hide scrollbar for smooth auto scroll */
+    position: relative;
   }
 
   .ai-discount-offers-container-{{ ai_gen_id }} {
@@ -22,6 +15,7 @@
     align-items: center;
     min-width: max-content;
     scroll-snap-type: x mandatory;
+    animation: scrollLeftLoop-{{ ai_gen_id }} 20s linear infinite;
   }
 
   .ai-discount-offer-{{ ai_gen_id }} {
@@ -36,6 +30,7 @@
     min-width: {{ block.settings.min_width }}px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     scroll-snap-align: start;
+    flex-shrink: 0; /* prevent shrinking for smooth scroll */
   }
 
   .ai-discount-offer-{{ ai_gen_id }}:hover {
@@ -57,10 +52,20 @@
     line-height: 1.3;
   }
 
+  @keyframes scrollLeftLoop-{{ ai_gen_id }} {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50%));
+    }
+  }
+
   @media screen and (max-width: 749px) {
     .ai-discount-offers-container-{{ ai_gen_id }} {
       justify-content: flex-start;
       padding-left: 10px;
+      animation-duration: 30s; /* slower scroll on small screens */
     }
 
     .ai-discount-percentage-{{ ai_gen_id }} {
@@ -79,40 +84,28 @@
 
 <div class="ai-discount-offers-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
   <div class="ai-discount-offers-container-{{ ai_gen_id }}">
+    {% comment %}
+      We duplicate the offers inside the container to create a seamless infinite scroll loop effect.
+    {% endcomment %}
+    {% assign offers = '' %}
     {% if block.settings.offer_1_percentage != blank %}
-      <div class="ai-discount-offer-{{ ai_gen_id }}">
-        <div class="ai-discount-percentage-{{ ai_gen_id }}">{{ block.settings.offer_1_percentage }}</div>
-        <div class="ai-discount-text-{{ ai_gen_id }}">{{ block.settings.offer_1_text }}</div>
-      </div>
+      {% assign offers = offers | append: '<div class="ai-discount-offer-' | append: ai_gen_id | append: '"><div class="ai-discount-percentage-' | append: ai_gen_id | append: '">' | append: block.settings.offer_1_percentage | append: '</div><div class="ai-discount-text-' | append: ai_gen_id | append: '">' | append: block.settings.offer_1_text | append: '</div></div>' %}
     {% endif %}
-
     {% if block.settings.offer_2_percentage != blank %}
-      <div class="ai-discount-offer-{{ ai_gen_id }}">
-        <div class="ai-discount-percentage-{{ ai_gen_id }}">{{ block.settings.offer_2_percentage }}</div>
-        <div class="ai-discount-text-{{ ai_gen_id }}">{{ block.settings.offer_2_text }}</div>
-      </div>
+      {% assign offers = offers | append: '<div class="ai-discount-offer-' | append: ai_gen_id | append: '"><div class="ai-discount-percentage-' | append: ai_gen_id | append: '">' | append: block.settings.offer_2_percentage | append: '</div><div class="ai-discount-text-' | append: ai_gen_id | append: '">' | append: block.settings.offer_2_text | append: '</div></div>' %}
     {% endif %}
-
     {% if block.settings.offer_3_percentage != blank %}
-      <div class="ai-discount-offer-{{ ai_gen_id }}">
-        <div class="ai-discount-percentage-{{ ai_gen_id }}">{{ block.settings.offer_3_percentage }}</div>
-        <div class="ai-discount-text-{{ ai_gen_id }}">{{ block.settings.offer_3_text }}</div>
-      </div>
+      {% assign offers = offers | append: '<div class="ai-discount-offer-' | append: ai_gen_id | append: '"><div class="ai-discount-percentage-' | append: ai_gen_id | append: '">' | append: block.settings.offer_3_percentage | append: '</div><div class="ai-discount-text-' | append: ai_gen_id | append: '">' | append: block.settings.offer_3_text | append: '</div></div>' %}
     {% endif %}
-
     {% if block.settings.offer_4_percentage != blank %}
-      <div class="ai-discount-offer-{{ ai_gen_id }}">
-        <div class="ai-discount-percentage-{{ ai_gen_id }}">{{ block.settings.offer_4_percentage }}</div>
-        <div class="ai-discount-text-{{ ai_gen_id }}">{{ block.settings.offer_4_text }}</div>
-      </div>
+      {% assign offers = offers | append: '<div class="ai-discount-offer-' | append: ai_gen_id | append: '"><div class="ai-discount-percentage-' | append: ai_gen_id | append: '">' | append: block.settings.offer_4_percentage | append: '</div><div class="ai-discount-text-' | append: ai_gen_id | append: '">' | append: block.settings.offer_4_text | append: '</div></div>' %}
+    {% endif %}
+    {% if block.settings.offer_5_percentage != blank %}
+      {% assign offers = offers | append: '<div class="ai-discount-offer-' | append: ai_gen_id | append: '"><div class="ai-discount-percentage-' | append: ai_gen_id | append: '">' | append: block.settings.offer_5_percentage | append: '</div><div class="ai-discount-text-' | append: ai_gen_id | append: '">' | append: block.settings.offer_5_text | append: '</div></div>' %}
     {% endif %}
 
-    {% if block.settings.offer_5_percentage != blank %}
-      <div class="ai-discount-offer-{{ ai_gen_id }}">
-        <div class="ai-discount-percentage-{{ ai_gen_id }}">{{ block.settings.offer_5_percentage }}</div>
-        <div class="ai-discount-text-{{ ai_gen_id }}">{{ block.settings.offer_5_text }}</div>
-      </div>
-    {% endif %}
+    {{ offers | raw }}
+    {{ offers | raw }} {# duplicated for infinite scroll #}
   </div>
 </div>
 
