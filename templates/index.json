@@ -32,20 +32,10 @@
             "target_device": "mobile"
           }
         },
-        "message_ymX83N": {
-          "type": "message",
-          "settings": {
-            "show_wheel": false,
-            "message": "You are ||amount|| away from free shipping.",
-            "text_font_size": "body-small",
-            "target_device_enabled": false,
-            "target_device": "mobile"
-          }
-        },
         "text_BMccq6": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Create a scrolling marquee or a simple announcement</strong></p>",
+            "text": "<p><strong>ATENCIÓN AL CLIENTE 24/7</strong></p>",
             "text_font_size": "body-small",
             "color": "",
             "target_device_enabled": false,
@@ -56,7 +46,6 @@
       "block_order": [
         "text_4EbKYh",
         "text_BdfYGH",
-        "message_ymX83N",
         "text_BMccq6"
       ],
       "name": "Scrolling text",
