@@ -17,7 +17,7 @@
           "settings": {
             "text": "<p><strong>CALIDAD SUPERIOR</strong></p>",
             "text_font_size": "body-small",
-            "color": "",
+            "color": "#ffffff",
             "target_device_enabled": false,
             "target_device": "mobile"
           }
