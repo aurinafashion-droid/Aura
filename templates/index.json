@@ -135,10 +135,10 @@
             "percentage_size": 24,
             "text_size": 13,
             "background_color": "#fff4ff",
-            "offer_background_color": "#000000",
+            "offer_background_color": "#f1f1f1",
             "percentage_color": "#fa0059",
-            "text_color": "#ffffff",
-            "border_color": "#000000",
+            "text_color": "#000000",
+            "border_color": "#ffffff",
             "border_width": 1,
             "border_radius": 2
           },
