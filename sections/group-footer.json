@@ -35,9 +35,9 @@
           "type": "text",
           "settings": {
             "image_width": 150,
-            "title": "Contact",
-            "heading_font_size": "heading-medium",
-            "text": "<p>1234 Main Street <br/>New York, NY 12345 <br/> 123.456.7890<br/>help@broadcast.com</p>",
+            "title": "Soporte al cliente",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Si tienes alguna pregunta o necesitas ayuda, ¡estamos aquí para ayudarte!<br/><br/><strong>Lunes a Viernes:</strong> 09:00-18:00<br/><strong>Sábados y Domingos:</strong> 09:00-12:00</p><p><strong>Email: </strong>info@camillasevilla.es</p>",
             "column_width": 33,
             "enable_accordion": false
           }
