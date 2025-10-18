@@ -130,7 +130,7 @@
             "offer_5_text": "",
             "gap": 10,
             "padding": 10,
-            "offer_padding": 10,
+            "offer_padding": 16,
             "min_width": 120,
             "percentage_size": 24,
             "text_size": 13,
@@ -327,7 +327,7 @@
         "grid": 3,
         "layout_mobile": "1",
         "color_scheme": "scheme-4bf997c9-f1f1-4bb7-9764-6c69fe128427",
-        "padding_top": 45,
+        "padding_top": 24,
         "padding_bottom": 75,
         "heading_tag": "automatic"
       }
