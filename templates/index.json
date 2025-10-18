@@ -299,12 +299,12 @@
         "icon-3": {
           "type": "icon",
           "settings": {
-            "icon_name": "icon-box",
+            "icon_name": "icon-green-shipment",
             "icon_size": 30,
             "icon_color": "rgba(0,0,0,0)",
             "title": "Envío gratuito",
             "heading_font_size": "heading-x-small",
-            "text": "<p>Ofrecemos envío exprés gratuito a toda España, utilizando mensajeros de confianza para garantizar que tu pedido llegue a tiempo.</p>",
+            "text": "<p>Ofrecemos envío urgente gratuito a toda España, utilizando mensajeros de confianza y respetuosos con el medio ambiente para garantizar que tu pedido llegue a tiempo.</p>",
             "text_font_size": "body-small",
             "heading_tag": "automatic"
           }
