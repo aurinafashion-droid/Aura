@@ -267,6 +267,30 @@
         "padding_bottom": 0
       }
     },
+    "hero-product": {
+      "type": "section-hero-product",
+      "settings": {
+        "image_1": "shopify://shop_images/Black_Simple_Personal_Logo.svg",
+        "link": "",
+        "product": "",
+        "description": "",
+        "text_font_size": "body-medium",
+        "enable_quick_add": true,
+        "color_product_bg": "#fcd6fc",
+        "color_product_text": "#212121",
+        "width": "wrapper--full",
+        "height": "four-fifty-height-hero",
+        "mobile_height": "four-fifty-height-hero--mobile",
+        "flex_align_mobile": "align--bottom-left-mobile",
+        "color_scheme": "scheme-1",
+        "show_text_background": false,
+        "overlay_opacity": 10,
+        "show_overlay_text": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
     "text-row": {
       "type": "section-text-row",
       "blocks": {
@@ -331,30 +355,6 @@
         "padding_bottom": 48,
         "heading_tag": "automatic"
       }
-    },
-    "hero-product": {
-      "type": "section-hero-product",
-      "settings": {
-        "image_1": "shopify://shop_images/Black_Simple_Personal_Logo.svg",
-        "link": "",
-        "product": "",
-        "description": "",
-        "text_font_size": "body-medium",
-        "enable_quick_add": true,
-        "color_product_bg": "#fcd6fc",
-        "color_product_text": "#212121",
-        "width": "wrapper--full",
-        "height": "four-fifty-height-hero",
-        "mobile_height": "four-fifty-height-hero--mobile",
-        "flex_align_mobile": "align--bottom-left-mobile",
-        "color_scheme": "scheme-1",
-        "show_text_background": false,
-        "overlay_opacity": 10,
-        "show_overlay_text": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "show_placeholder": true
-      }
     }
   },
   "order": [
@@ -364,7 +364,7 @@
     "hero",
     "section_countdown_timer_8QRnty",
     "section_rich_text_8L36mW",
-    "text-row",
-    "hero-product"
+    "hero-product",
+    "text-row"
   ]
 }
